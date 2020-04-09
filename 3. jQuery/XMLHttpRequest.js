@@ -20,6 +20,7 @@ $(document).ready(() => {
         }
     }
 
+    $(`#request`).one('click', () => 
     getData(`https://reqres.in/api/users?per_page=10`)
-        .then(resp => mapResponseToHTML(JSON.parse(resp)));
+        .then(resp => mapResponseToHTML(JSON.parse(resp))));
 });
